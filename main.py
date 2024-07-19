@@ -30,7 +30,7 @@ class StudentRequest(BaseModel):
 
 
 # Get All Data
-@app.get("/", status_code=status.HTTP_200_OK)
+@app.get("/student", status_code=status.HTTP_200_OK)
 async def read_all(db: db_dependency):
     return db.query(Students).all()
 
